@@ -2,10 +2,8 @@ package modelo;
 
 public class GeometriaEspacial extends GeometriaPlana{
 
-    private double altura, geratriz, raio, raioMaior, raioMenor, areaBase, areaBaseMaior, areaBaseMenor, perimetroBase,
-            perimetroBaseMaior, perimetroBaseMenor, apotema;
+    private double altura, geratriz, raio, raioMaior, raioMenor, areaBase, areaBaseMaior, areaBaseMenor, perimetroBase, perimetroBaseMaior, perimetroBaseMenor, apotema;
 
-    // prisma
     public void setPrisma(double areaBase, double perimetroBase, double altura) {
         this.areaBase = areaBase;
         this.perimetroBase = perimetroBase;
@@ -20,9 +18,8 @@ public class GeometriaEspacial extends GeometriaPlana{
         return areaBase * altura;
     }
 
-    // cilindro
     public void setCilindro(double raio, double altura) {
-        setCirculo(raio); // sets raio in GeometriaPlana
+        setCirculo(raio); 
         this.altura = altura;
     }
 

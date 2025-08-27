@@ -4,14 +4,36 @@ public class GeometriaPlana {
 
     private double ladoA, ladoB, base, altura, diagonalMaior, diagonalMenor, baseMaior, baseMenor, raio;
 
+    // quadrado 
+
     public void setQuadrado (double ladoA) {
         this.ladoA = ladoA;
     }
+
+    public double areaQuadrado () {
+        return Math.pow(ladoA, 2);
+    }
+
+    public double perimetroQuadrado () {
+        return 4 * ladoA;
+    }
+
+    // retângulo
 
     public void setRetangulo (double base, double altura) {
         this.base = base;
         this.altura = altura;
     }
+
+    public double areaRetangulo () { 
+        return base * altura;
+    }
+
+    public double perimetroRetangulo () {
+        return 2 * (base + altura);
+    }
+
+    // paralelogramo
 
     public void setParalelogramo (double base, double altura, double ladoA, double ladoB) {
         this.base = base;
@@ -20,11 +42,31 @@ public class GeometriaPlana {
         this.ladoB = ladoB; 
     }
 
+    public double areaParalelogramo () { 
+        return base * altura;
+    }
+
+    public double perimetroParalelogramo () {
+        return 2 * (base + altura);
+    }
+
+    // losango
+
     public void setLosango (double diagonalMaior, double diagonalMenor, double ladoA) {
         this.diagonalMaior = diagonalMaior;
         this.diagonalMenor = diagonalMenor;
         this.ladoA = ladoA;
     }
+
+    public double areaLosango () {
+        return (diagonalMaior * diagonalMenor) / 2;
+    }
+
+    public double perimetroLosango () {
+        return 4 * ladoA;
+    }
+
+    // trapézio
 
     public void setTrapezio (double baseMaior, double baseMenor, double altura) {
         this.baseMaior = baseMaior;
@@ -32,78 +74,42 @@ public class GeometriaPlana {
         this.altura = altura;
     }
 
+    public double areaTrapezio () {
+        return ((baseMaior + baseMenor) * altura) / 2;
+    }
+
+    public double perimetroTrapezio () {
+        return baseMaior + baseMenor + ladoA + ladoB;
+    }
+
+    // triângulo
+
     public void setTriangulo (double base, double altura) {
         this.base = base;
         this.altura = altura;
     }
 
-    public void setCirculo (double raio) {
-        this.raio = raio;
-    }
-
-
-    // áreas
-
-    // área do quadrado
-    public double areaQuadrado () {
-        return Math.pow(ladoA, 2);
-    }
-
-    // área do retângulo e do paralelogramo
-    public double areaRP () { 
-        return base * altura;
-    }
-
-    // área do losango
-    public double areaLosango () {
-        return (diagonalMaior * diagonalMenor) / 2;
-    }
-
-    // área do trapézio
-    public double areaTrapezio () {
-        return ((baseMaior + baseMenor) * altura) / 2;
-    }
-
-    // triângulos
     public double areaTriangulo () {
         return (base * altura) / 2;
     }
 
-    // área do círculo
-    public double areaCirculo () {
-        return Math.PI * Math.pow(raio, 2);
-    }
-
-
-    // perímetros
-
-    // perímetro do quadrado
-    public double perimetroQuadrado () {
-        return 4 * ladoA;
-    }
-
-    // perímetro do retângulo e paralelogramo
-    public double perimetroRP () {
-        return 2 * (base + altura);
-    }
-
-    // perímetro do losango
-    public double perimetroLosango () {
-        return 4 * ladoA;
-    }
-
-    // perímetro do trapézio
-    public double perimetroTrapezio () {
-        return baseMaior + baseMenor + ladoA + ladoB;
-    }
-
-    // perímetro do triângulo
     public double perimetroTriangulo () {
         return base + ladoA + ladoB;
     }
 
-    // perímetro do círculo
+
+    // círculo
+
+    public void setCirculo (double raio) {
+        this.raio = raio;
+    }
+
+    public double areaCirculo () {
+        return Math.PI * Math.pow(raio, 2);
+    }
+
     public double perimetroCirculo () {
         return 2 * Math.PI * raio;
     }
+
 }
