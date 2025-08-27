@@ -4,6 +4,8 @@ public class GeometriaEspacial extends GeometriaPlana{
 
     private double altura, geratriz, raio, raioMaior, raioMenor, areaBase, areaBaseMaior, areaBaseMenor, perimetroBase, perimetroBaseMaior, perimetroBaseMenor, apotema;
 
+    // prisma
+
     public void setPrisma(double areaBase, double perimetroBase, double altura) {
         this.areaBase = areaBase;
         this.perimetroBase = perimetroBase;
@@ -17,6 +19,8 @@ public class GeometriaEspacial extends GeometriaPlana{
     public double volumePrisma() {
         return areaBase * altura;
     }
+
+    // cilindro
 
     public void setCilindro(double raio, double altura) {
         setCirculo(raio); 
@@ -32,6 +36,7 @@ public class GeometriaEspacial extends GeometriaPlana{
     }
 
     // piramide
+
     public void setPiramide(double areaBase, double perimetroBase, double altura, double geratriz) {
         this.areaBase = areaBase;
         this.perimetroBase = perimetroBase;
@@ -48,6 +53,7 @@ public class GeometriaEspacial extends GeometriaPlana{
     }
 
     // esfera
+
     public void setEsfera(double raio) {
         this.raio = raio;
     }
@@ -61,6 +67,7 @@ public class GeometriaEspacial extends GeometriaPlana{
     }
 
     // cone
+
     public void setCone(double raio, double altura, double geratriz) {
         this.raio = raio;
         setCirculo(raio);
@@ -76,7 +83,8 @@ public class GeometriaEspacial extends GeometriaPlana{
         return (areaCirculo() * altura) / 3;
     }
 
-    // tronco de cone
+    // tronco do cone
+
     public void setTroncoCone(double raioMaior, double raioMenor, double altura, double geratriz) {
         this.raioMaior = raioMaior;
         this.raioMenor = raioMenor;
@@ -92,9 +100,9 @@ public class GeometriaEspacial extends GeometriaPlana{
         return (Math.PI * altura / 3) * (Math.pow(raioMaior, 2) + raioMaior * raioMenor + Math.pow(raioMenor, 2));
     }
 
-    // tronco de piramide
-    public void setTroncoPiramide(double areaBaseMaior, double areaBaseMenor, double perimetroBaseMaior,
-            double perimetroBaseMenor, double altura, double apotema) {
+    // tronco da piramide
+
+    public void setTroncoPiramide(double areaBaseMaior, double areaBaseMenor, double perimetroBaseMaior, double perimetroBaseMenor, double altura, double apotema) {
         this.areaBaseMaior = areaBaseMaior;
         this.areaBaseMenor = areaBaseMenor;
         this.perimetroBaseMaior = perimetroBaseMaior;
