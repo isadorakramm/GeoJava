@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Aplicacao {
+public class aplicacao {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -162,7 +162,7 @@ public class Aplicacao {
                     geometriaPlana.setTriangulo(baseTriangulo, alturaTriangulo);
                     System.out.println("Área do Triângulo: " + geometriaPlana.areaTriangulo());
                     System.out.println("Perímetro do Triângulo: (O cálculo requer os outros lados)");
-                    
+
                     break;
                 case 4: // Paralelogramo
                     System.out.println("\nVocê escolheu Paralelogramo.");
@@ -201,7 +201,7 @@ public class Aplicacao {
                     geometriaPlana.setTrapezio(baseMaiorTrapezio, baseMenorTrapezio, alturaTrapezio);
                     System.out.println("Área do Trapézio: " + geometriaPlana.areaTrapezio());
                     System.out.println("Perímetro do Trapézio: (O cálculo requer os outros lados)");
-                    
+
                     break;
                 case 7: // Círculo
                     System.out.println("\nVocê escolheu Círculo.");
