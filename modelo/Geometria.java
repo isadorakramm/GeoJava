@@ -36,7 +36,7 @@ public class Geometria {
     }
 
     public static double perimetroParalelogramo(double ladoA, double ladoB) {
-        return 2 * (ladoA + ladoB);
+        return geoPla.perimetroParalelogramo();
     }
 
     // losango
